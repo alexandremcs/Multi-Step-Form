@@ -15,12 +15,18 @@
             <h2>Step 1</h2>
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name"><br>
+
+            <label for="cpf">CPF:</label><br>
+            <input type="text" id="cpf" name="cpf"><br>
             <button type="button" onclick="showStep(2)">Next</button>
         </div>
         
         <!-- Step 2 -->
         <div id="step-2" style="display: none;">
             <h2>Step 2</h2>
+            <label for="Telefone">Telefone:</label><br>
+            <input type="phone" id="phone" name="phone"><br>
+
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email"><br>
             <button type="button" onclick="showStep(1)">Back</button>
