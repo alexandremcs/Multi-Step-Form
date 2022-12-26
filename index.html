@@ -9,35 +9,46 @@
 </head>
 <body>
     <!-- HTML for the form -->
-    <form id="my-form">
+    <form id="my-form" action="#" class="form">
         <!-- Step 1 -->
-        <div id="step-1">
+        <div id="step-1" class="form-step form-step-active">
             <h2>Step 1</h2>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
+            <div class="input-group">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+            </div>
 
-            <label for="cpf">CPF:</label><br>
-            <input type="text" id="cpf" name="cpf"><br>
+            <div class="input-group">
+                <label for="cpf">CPF:</label><br>
+                <input type="text" id="cpf" name="cpf"><br>
+            </div>
+
             <button type="button" onclick="showStep(2)">Next</button>
         </div>
         
         <!-- Step 2 -->
-        <div id="step-2" style="display: none;">
+        <div id="step-2" class="form-step form-step-active" style="display: none;">
             <h2>Step 2</h2>
-            <label for="Telefone">Telefone:</label><br>
-            <input type="phone" id="phone" name="phone"><br>
+            <div class="input-group">
+                <label for="Telefone">Telefone:</label><br>
+                <input type="phone" id="phone" name="phone"><br>
+            </div>    
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
+            <div class="input-group">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+            </div>
             <button type="button" onclick="showStep(1)">Back</button>
             <button type="button" onclick="showStep(3)">Next</button>
         </div>
         
         <!-- Step 3 -->
-        <div id="step-3" style="display: none;">
+        <div id="step-3" class="form-step form-step-active" style="display: none;">
             <h2>Step 3</h2>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br>
+            <div class="input-group">
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+            </div>
             <button type="button" onclick="showStep(2)">Back</button>
             <button type="submit">Submit</button>
         </div>
