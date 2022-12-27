@@ -13,32 +13,11 @@ body {
     min-height: 100vh;
 }
 
-form {
-    width: 500px;
+/*CSS do Form*/
+.form {
+    width: clamp(320px, 30%, 430px);
     margin: 0 auto;
-}
-
-form div {
-    margin: 20px 0;
-}
-
-form label {
-    display: block;
-    margin: 10px 0;
-}
-
-form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    padding: 10px;
-    border: 0;
-    background-color: #333;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
 }
