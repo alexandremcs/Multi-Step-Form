@@ -1,4 +1,8 @@
 /* CSS for styling the form */
+:root {
+    --primary-color: rgb(11, 78, 179);
+}
+
 *,
 *::before,
 *::after {
@@ -26,6 +30,14 @@ input {
     border-radius: 0.25rem;
 }
 
+.width-50 {
+    width: 50%;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
 /* Form Style */
 .form {
     width: clamp(320px, 30%, 430px);
@@ -37,4 +49,21 @@ input {
 
 .input-group {
     margin: 2rem 0;
+}
+
+/* Button */
+.btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px var(--primary-color);
 }
