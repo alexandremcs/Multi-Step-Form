@@ -38,5 +38,9 @@ function updateProgressBar(){
         } else {
             progressStep.classList.remove('progress-step-active');
         }
-    })
+    });
+
+    const progressActive = document.querySelectorAll(".progress-step-active");
+
+    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
