@@ -22,7 +22,7 @@ Projeto front-end com Javascript de um formulário Multi-Step. Presente em prati
 ## Status do Projeto
   
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM ANDAMENTO&color=YELLOW&style=for-the-badge)
   
 
 ## ⚙️ Funcionalidades
@@ -30,6 +30,7 @@ Projeto front-end com Javascript de um formulário Multi-Step. Presente em prati
 - Captação de informações diversas
 - Mudança de passos no formulário
 - Transições com animação
+- Envio do conteúdo pelo email
 
 
 ## 🚀 Como executar o projeto
