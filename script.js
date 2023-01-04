@@ -2,7 +2,8 @@ const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
 const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
-const progressSteps = document.querySelectorAll(".progress-step")
+const progressSteps = document.querySelectorAll(".progress-step");
+const form = document.getElementById("form");
 
 let formStepsNum = 0;
 
@@ -44,3 +45,14 @@ function updateProgressBar(){
 
     progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var name = document.getElementById("name").value;
+    var birth = document.getElementById("birth").value;
+    var tel = document.getElementById("tel").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    console.log(name, birth, tel, email, password, confirmPassword);
+});
