@@ -1,58 +1,26 @@
-const prevBtns = document.querySelectorAll(".btn-prev");
-const nextBtns = document.querySelectorAll(".btn-next");
-const progress = document.getElementById("progress");
-const formSteps = document.querySelectorAll(".form-step");
-const progressSteps = document.querySelectorAll(".progress-step");
-const form = document.getElementById("form");
+const nodemailer = require('nodemailer');
 
-let formStepsNum = 0;
+let transporter = nodemailer.createTransport({
+    host: 'smtp.hostinger.com',
+    port: 465,
+    secure: false,
+    auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASSWORD
+    }
+});
 
-nextBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        formStepsNum++;
-        updateFormSteps();
-        updateProgressBar();
-    })
-})
+let mailOptions = {
+    from: '"Your Name" <your-email@example.com>',
+    to: 'alexmcs@gmail.com',
+    subject: 'Subject',
+    text: 'Text',
+    html: '<b>HTML</b>'
+};
 
-prevBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        formStepsNum--;
-        updateFormSteps();
-        updateProgressBar();
-    })
-})
-
-function updateFormSteps(){
-    formSteps.forEach((formStep) => {
-        formStep.classList.contains("form-step-active") &&
-            formStep.classList.remove("form-step-active");
-    });
-
-    formSteps[formStepsNum].classList.add("form-step-active");
-}
-
-function updateProgressBar(){
-    progressSteps.forEach((progressStep, index) => {
-        if(index < formStepsNum + 1) {
-            progressStep.classList.add('progress-step-active');
-        } else {
-            progressStep.classList.remove('progress-step-active');
-        }
-    });
-
-    const progressActive = document.querySelectorAll(".progress-step-active");
-
-    progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
-}
-
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    var name = document.getElementById("name").value;
-    var birth = document.getElementById("birth").value;
-    var tel = document.getElementById("tel").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("confirmPassword").value;
-    console.log(name, birth, tel, email, password, confirmPassword);
+transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        return console.log(error);
+    }
+    console.log('Message sent: %s', info.messageId);
 });
