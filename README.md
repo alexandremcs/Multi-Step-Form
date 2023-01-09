@@ -30,7 +30,6 @@ Projeto front-end com Javascript de um formulário Multi-Step. Presente em prati
 - Captação de informações diversas
 - Mudança de passos no formulário
 - Transições com animação
-- Envio do conteúdo pelo email
 
 
 ## 🚀 Como executar o projeto
