@@ -17,7 +17,7 @@
 
 ## Descrição do Projeto
 
-Projeto front-end com Javascript de um formulário Multi-Step. Presente em praticamente toda página da web, os formulários possuem uma função importante na interação do cliente com o serviço prestado. Nesse modelo, apresento o conceito multi-step que é muito importante nos casos em que as informações captadas são mais completas e portanto, necessitam de mais campos no formulário.  
+Projeto front-end com Javascript de um formulário Multi-Step. Presente em praticamente todo site da web, os formulários possuem uma função importante na interação do cliente com o serviço prestado. Nesse modelo, apresento o conceito multi-step que é muito importante nos casos em que as informações captadas são mais completas e portanto, necessitam de mais campos no formulário.  
 
 ## Status do Projeto
   
